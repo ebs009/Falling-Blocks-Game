@@ -1,0 +1,31 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Pass By</title>
+</head>
+
+<body>
+    <script>
+        function addOne(thing) { //pass by value, a number that will just be that           number
+            thing = thing + 1;
+        }
+
+        var a = 3;
+        addOne(a);
+        console.log(a);
+
+        function addOne(obj) { //pass by reference, an object will grab that object         itself and operate on it
+            obj.a = obj.a + 1;
+        }
+        var o = {
+            a: 3
+        };
+        addOne(o);
+        console.log(o.a);
+    </script>
+
+
+
+</body>
